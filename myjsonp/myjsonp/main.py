@@ -27,10 +27,15 @@ app = typer.Typer(rich_markup_mode="rich")
 @app.command(epilog="Made by [green]mariollesta[/green]") 
 def myjsonp(
     file:str = typer.Argument("", help="File PATH"), 
-    s: bool = typer.Option(help="Simple JSON parser", rich_help_panel="Main Options")  
 ):
     
     try:
+        
+        # 0 -> valid JSON, 1 -> invalid JSON
+        valid = 0
+        invalid = 1    
+        
+        content = None
         
         if file:
             with open(file, 'r') as f:
@@ -39,20 +44,18 @@ def myjsonp(
         else:
             content = sys.stdin.buffer.read()
     
+        json_data = json.loads(content)
+        print(json_data)
         
-        # 0 -> valid JSON, 1 -> invalid JSON
-        valid = 0
-        invalid = 1
-        
-        if s:
-              try:
-                  json.loads(content)
-                  print(valid)
+        if isinstance(json_data, dict):
+            print(valid)
+        else:
+            print(invalid)
+         
               
-              except ValueError:
-                  print(invalid)
+    except json.JSONDecodeError as e:
+                  print(f"Error decoding JSON.")          
 
-      
     except FileNotFoundError:
         print(f"Error: File not found.")
            
