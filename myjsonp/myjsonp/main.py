@@ -63,6 +63,15 @@ def myjsonp(
     file:str = typer.Argument("", help="File PATH"), 
 ):
     
+    """
+    Outline:
+    Print 0 if FILE contains a valid JSON object, 1 if FILE contains and invalid one.
+    With no FILE, read standard input.
+    
+    If no input or file is entered, the program will do nothing. 
+    In this case, press Ctrl/Cmd + c to stop its execution.
+    """
+    
     # 0 -> valid JSON
     # 1 -> invalid JSON 
     result = "0. Valid JSON" if json_parser(file) == 0 else "1. Invalid JSON"
