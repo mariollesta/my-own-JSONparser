@@ -55,7 +55,7 @@ def json_parser(file:str):
         
     
     except json.JSONDecodeError as e:
-        return 1 
+        return 1
 
 
 @app.command(epilog="Made by [green]mariollesta[/green]") 
