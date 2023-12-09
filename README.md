@@ -11,7 +11,7 @@
 
 ## About
 
-Following the guidelines of the [Coding Challenges blog](https://codingchallenges.fyi/), the goal of this project is the development of a proprietary version of a JSON parser tool, which it's been called **_myjsonp_**.
+Following the guidelines of the [Coding Challenges blog](https://codingchallenges.fyi/challenges/challenge-json-parser), the goal of this project is the development of a proprietary version of a JSON parser tool, which it's been called **_myjsonp_**.
 
 > Give me a star if you find it useful :)
 
