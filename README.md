@@ -69,5 +69,15 @@ You will see something like what is shown in the following image:
 
 ![](./images/myjsonp_help.png)
 
+Thus, we could execute the command in two ways:
 
+- Passing a file as a parameter
+  ```terminal
+  myjsonp <PATH to file>
+  ```
+
+- Through standard input
+  ```terminal
+  cat <PATH to file> | myjsonp 
+  ```
 
