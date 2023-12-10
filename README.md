@@ -56,3 +56,18 @@ pip install <PATH>/mywc-<version>-py3-none-any.whl
 ---
 
 ## How to use
+
+This tool has no options, it simply needs a file passed as a parameter or a standard input.
+
+We can execute the option --help to see more details.
+
+```terminal
+myjsonp --help
+```
+
+You will see something like what is shown in the following image:
+
+![](./images/myjsonp_help.png)
+
+
+
